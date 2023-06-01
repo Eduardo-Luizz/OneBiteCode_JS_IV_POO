@@ -1,0 +1,43 @@
+1 - Com o ES6 o javascript implementou uma forma mais amigável de construir objetos que é semelhante ao que outras linguagens orientadas a objetos possuíam, as **classes**:
+    Obs.: Ao bloco que define a forma de construir os objetos damos o nome de **Classe**, ao objeto criado pela classe damos o nome de **Instância**
+
+class Book {
+	// Configuraremos as instâncias aqui dentro
+}
+
+const eragon = new Book()
+
+console.log(eragon)
+
+2 - Para que uma classe tenha atributos nós utilizamos um método construtor:
+class Book {
+  constructor (title) {
+    this.title = title
+  } 
+}
+
+const eragon = new Book("Eragon")
+const eldest = new Book("Eldest")
+
+console.log(eragon, eldest)
+
+3 - Para que uma classe tenha métodos nós os declaramos da seguinte forma:
+class Book {
+  constructor (title) {
+    this.title = title
+    this.published = false
+  }
+
+  publish() {
+    this.published = true
+  }
+}
+
+const eragon = new Book("Eragon")
+const eldest = new Book("Eldest")
+
+eragon.publish()
+
+console.log(eragon)
+console.log(eldest)
+console.log(eragon instanceof Book)
